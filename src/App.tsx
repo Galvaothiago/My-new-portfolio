@@ -1,8 +1,10 @@
+import { Container } from "./global"
+
 function App() {
   return (
-    <div>
+    <Container>
       Hello World
-    </div>
+    </Container>
   )
 }
 
