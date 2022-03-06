@@ -9,7 +9,7 @@ export function Header() {
                     <Link>sobre</Link>
                     <Link>projetos</Link>
                     <Link>cursos</Link>
-                    <Link>experiencia</Link>
+                    <Link>experiência</Link>
                 </div>
             </Menu>
         </Container>

@@ -25,9 +25,11 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export const Container = styled.div`
-    max-width: 1336px;
+    max-width: 1366px;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 
     margin: 0 auto;
 

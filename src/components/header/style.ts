@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    max-width: 1366px;
     width: 100%;
     height: 6rem;
     display: flex;
@@ -24,11 +25,17 @@ export const LogoName = styled.div`
     color: white;
     font-weight: 700;
 
+    border: 1px solid #ff758f;
+
     cursor: pointer;
 
     webkit-box-shadow: -5px 4px 24px -9px rgba(0,0,0,0.75);
     -moz-box-shadow: -5px 4px 24px -9px rgba(0,0,0,0.75);
     box-shadow: -5px 4px 24px -9px rgba(0,0,0,0.75);
+
+    &:active {
+        transform: scale(1.03);
+    }
 
 `
 
