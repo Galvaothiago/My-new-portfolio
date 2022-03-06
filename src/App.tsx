@@ -1,9 +1,14 @@
-import { Container } from "./global"
+import { Header } from "./components/header"
+import { Container, Content } from "./global"
+import { Home } from "./pages/home"
 
 function App() {
   return (
     <Container>
-      Hello World
+      <Header />
+      <Content>
+        <Home />
+      </Content>
     </Container>
   )
 }

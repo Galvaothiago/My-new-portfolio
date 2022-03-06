@@ -20,15 +20,22 @@ export const GlobalStyle = createGlobalStyle`
         width: 100vw;
         height: 100vh;
 
-        margin: 0 auto;
-
-        background-color: #f8f9fa;
+        background-color: #ffff;
     }
 `
 
 export const Container = styled.div`
-    max-width: 1448px
+    max-width: 1336px;
     width: 100%;
+    height: 100%;
 
+    margin: 0 auto;
+
+    background-color: #f8f9fa;
+
+`
+
+export const Content = styled.div`
+    width: 100%;
     height: 100%;
 `
