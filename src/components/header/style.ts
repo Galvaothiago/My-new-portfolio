@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     max-width: 1366px;
     width: 100%;
-    height: 6rem;
+    height: 7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,24 +44,29 @@ export const Menu = styled.nav`
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    
 
     div {
-        max-width: 400px;
+        max-width: 450px;
         width: 100%;
+        height: 100%;
         display: flex;
         justify-content: space-around;
-    }
-`
 
-export const Link = styled.a`
-    width: auto;
+        a {
+            text-decoration: none;
+            color: #2b2b2b;
 
-    font-size: 1.1rem;
-    transition: all .25s;
+            line-height: 1rem;
+            padding:1rem;
+            
+            border-radius: 25px;
+            transition: all .2s;
 
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
+            &:hover {
+                transform: scale(1.07);
+            }
+        }
     }
 `

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.main`
     width: 100%;
     height: 100vh;
 
@@ -19,7 +19,7 @@ export const GeometricShape = styled.div`
     justify-content: center;
 
     background-color: #c71f37;
-    border-radius: 0 15rem 15rem 0;
+    border-radius: 0 10rem 10rem 0;
     position: relative;
 
 `

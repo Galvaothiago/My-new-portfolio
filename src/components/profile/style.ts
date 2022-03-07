@@ -20,6 +20,10 @@ export const Container = styled.div`
     background-size: contain;
 
     animation: ${profileEffect} 1s ease-in-out;
+
+    -webkit-box-shadow: 17px 11px 51px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 17px 11px 51px -13px rgba(0,0,0,0.75);
+    box-shadow: 17px 11px 51px -13px rgba(0,0,0,0.75);
 `
 
 export const Border = styled.div`
@@ -35,4 +39,6 @@ export const Border = styled.div`
     border: 4px solid #ff758f;
 
     animation: ${profileEffect} 1s ease-in-out;
+
+
 `
