@@ -34,7 +34,7 @@ export const Container = styled.div`
 
     margin: 0 auto;
 
-    background-color: #f8f9fa;
+    background-color: #f2f2f2;
 
 `
 

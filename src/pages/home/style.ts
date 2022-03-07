@@ -60,11 +60,14 @@ export const Content = styled.section`
 
         div {
             text-align: right;
-            button {
-                width: 11rem;
-                height: 2.5rem;
+            margin-top: 1rem;
+            a {
+                width: auto;
+                padding: .7rem 2.5rem;
                 background-color:  #343a40;
                 color: white;
+                text-decoration: none;
+                font-size: .9rem;
 
                 border: none;
                 border-radius: 5px;

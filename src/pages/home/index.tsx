@@ -6,6 +6,8 @@ export function Home() {
     const preview = "Desenvolvedor web front-end e back-end, apaixonado por tecnologia " + 
     "e por solucionar problemas."
 
+    const link_cv = String(import.meta.env.VITE_LINK_CV)
+
     return (
         <Container>
             <GeometricShape>
@@ -15,8 +17,10 @@ export function Home() {
                 <div>
                     <h3>{ title }</h3>
                     <p>{ preview }</p>
-                    <div>
-                        <button>Baixar CV</button>
+                    <div>  
+                        <a  
+                        href={link_cv}
+                        >Baixar CV</a>
                     </div>
                 </div>
             </Content>
