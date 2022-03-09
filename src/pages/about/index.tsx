@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { ContainerAbout, Content, GeometricShape } from "./style";
+import { ContainerAbout, Content } from "./style";
 import { Container } from "./style";
 import { AiFillHome } from 'react-icons/ai'
 import { Link } from "react-router-dom";
+import { Sidebar } from "../../components/sidebar";
 
 export function About() {
     const about_me = `Meu nome é Thiago Silva Galvão, atualmente moro em Vinhedo - SP. 
@@ -40,11 +41,7 @@ export function About() {
 
     return (
         <Container>
-            <GeometricShape>
-                <Link to="/">
-                    < AiFillHome />
-                </Link>
-            </GeometricShape>
+            <Sidebar />
             <Content>
                 <ContainerAbout>
                     <p>{ trucate(about_me)}</p>
