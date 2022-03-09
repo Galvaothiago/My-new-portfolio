@@ -1,4 +1,5 @@
 import { Container } from "./style";
+import { HiCode } from 'react-icons/hi'
 
 export function Card() {
     return (
@@ -12,7 +13,12 @@ export function Card() {
                 <span>BACKEND</span>
             </header>
             <div>
-                tecnologias
+                <p>API Rest desenvolvida utilizando Java e diversas outras tecnologias do universo Spring  ...</p>
+                <footer>
+                    <a href="">
+                        <HiCode />
+                    </a>
+                </footer>
             </div>
         </Container>
     )

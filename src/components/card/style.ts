@@ -20,7 +20,7 @@ export const Container = styled.div`
     }
 
     header { 
-        flex: .5;
+        flex: .4;
         text-align: center;
         text-transform: uppercase;
 
@@ -38,7 +38,7 @@ export const Container = styled.div`
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: .5rem;
 
             img {
                 width: 60px;
@@ -57,7 +57,41 @@ export const Container = styled.div`
         }
     }
 
-    div {
-        flex: .5;
+    > div {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 100%;
+        flex: .6;
+        padding: 0 1rem;
+
+        p {
+            padding-top: 2rem;
+            font-size: .8rem;
+        }
+
+        footer {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-end;
+
+            a {
+                width: 2rem;
+                height: 2rem;
+                display: grid;
+                place-items: center;
+            
+                
+                border-radius: 50%;
+                background-color: #f8f9fa;
+
+                -webkit-box-shadow: -2px 4px 9px -1px rgba(0,0,0,0.1);
+                -moz-box-shadow: -2px 4px 9px -1px rgba(0,0,0,0.1);
+                box-shadow: -2px 4px 9px -1px rgba(0,0,0,0.1);
+            }
+        }
     }
 `
