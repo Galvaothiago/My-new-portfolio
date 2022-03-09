@@ -5,7 +5,7 @@ const shapeEffect = keyframes`
         max-width: 350px;
     } 
     to {
-        max-width: 200px;
+        max-width: 100px;
     }
 `
 
@@ -30,7 +30,7 @@ export const Container = styled.main`
 `
 
 export const GeometricShape = styled.div`
-    max-width: 200px;
+    max-width: 100px;
     width: 100%;
     height: 100%;
 
