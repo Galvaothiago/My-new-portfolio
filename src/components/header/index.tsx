@@ -4,7 +4,7 @@ import { Container, LogoName, Menu } from "./style";
 
 export function Header() {
     const links = ['sobre', 'projetos', 'cursos', 'experiências']
-    const linksPath = ['/about', '/projects', '/couses', '/experience']
+    const linksPath = ['/about', '/projects', '/courses', '/experience']
 
     const [ linkSelected, setLinkSelected ] = useState<String>('')
 
