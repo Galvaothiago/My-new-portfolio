@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, keyframes } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -41,4 +41,16 @@ export const Container = styled.div`
 export const Content = styled.div`
     width: 100%;
     height: 100%;
+`
+
+export const appearEffect = keyframes`
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 `

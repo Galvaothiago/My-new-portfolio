@@ -1,16 +1,7 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
+import { appearEffect } from '../../global'
 
-const appearEffect = keyframes`
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
+
 
 export const Container = styled.main`
     width: 100%;
