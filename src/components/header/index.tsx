@@ -4,16 +4,12 @@ import { HoverContext } from "../../context/HandleHoverContext";
 import { Container, LogoName, Menu } from "./style";
 
 export function Header() {
+    const [ linkSelected, setLinkSelected ] = useState<String>('')
+    const { showBackground } = useContext(HoverContext)
+    
     const links = ['sobre', 'projetos', 'cursos', 'experiências']
     const linksPath = ['/about', '/projects', '/courses', '/experience']
 
-    const [ linkSelected, setLinkSelected ] = useState<String>('')
-    // const [ showBackground, setShowBackground ] = useState<boolean>(false)
-    const { showBackground } = useContext(HoverContext)
-
-    const handleBackgroundHeader = () => {
-        
-    }
     const handleChangeLinkStyle = (option: string) => {
         setLinkSelected(option)
     }
