@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { HoverContext } from "../../context/HandleHoverContext";
 import { Container, LogoName, Menu } from "./style";
 
 export function Header() {
@@ -7,7 +8,8 @@ export function Header() {
     const linksPath = ['/about', '/projects', '/courses', '/experience']
 
     const [ linkSelected, setLinkSelected ] = useState<String>('')
-    const [ showBackground, setShowBackground ] = useState<boolean>(false)
+    // const [ showBackground, setShowBackground ] = useState<boolean>(false)
+    const { showBackground } = useContext(HoverContext)
 
     const handleBackgroundHeader = () => {
         
@@ -17,13 +19,8 @@ export function Header() {
     }
 
     return (
-        <Container bgLinear={false}>
-            <Link onClick={() => setLinkSelected('')} to="/">
-                <LogoName>
-                    TG
-                </LogoName>
-            </Link>    
-            <Menu bgLinear={false}>
+        <Container bgLinear={showBackground}>
+            <Menu bgLinear={showBackground}>
                 <div>
                     { links.map((link, index) => (
                         <Link 
@@ -37,6 +34,11 @@ export function Header() {
                     )) }
                 </div>
             </Menu>
+            <Link onClick={() => setLinkSelected('')} to="/">
+                <LogoName>
+                    TG
+                </LogoName>
+            </Link>    
         </Container>
     )
 }

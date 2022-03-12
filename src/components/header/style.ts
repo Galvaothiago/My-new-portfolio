@@ -70,7 +70,7 @@ export const Menu = styled.nav<bgLinearProps>`
             padding:1rem;
             
             border-radius: 25px;
-            transition: all .2s;
+            transition: all .2s ease-in-out;
 
             &:hover {
                 transform: scale(1.07);
