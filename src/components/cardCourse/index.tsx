@@ -36,6 +36,9 @@ export function CardCourse() {
                     <OtherInfo>
                         <span>carga horária:</span>
                         <p>33h</p>
+                        <div>
+                            <span>1 - 10</span>
+                        </div>
                     </OtherInfo>
                 </SchoolContent>
             </Content>

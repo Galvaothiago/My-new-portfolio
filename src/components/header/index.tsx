@@ -7,19 +7,23 @@ export function Header() {
     const linksPath = ['/about', '/projects', '/courses', '/experience']
 
     const [ linkSelected, setLinkSelected ] = useState<String>('')
+    const [ showBackground, setShowBackground ] = useState<boolean>(false)
 
+    const handleBackgroundHeader = () => {
+        
+    }
     const handleChangeLinkStyle = (option: string) => {
         setLinkSelected(option)
     }
 
     return (
-        <Container>
+        <Container bgLinear={false}>
             <Link onClick={() => setLinkSelected('')} to="/">
                 <LogoName>
                     TG
                 </LogoName>
             </Link>    
-            <Menu>
+            <Menu bgLinear={false}>
                 <div>
                     { links.map((link, index) => (
                         <Link 

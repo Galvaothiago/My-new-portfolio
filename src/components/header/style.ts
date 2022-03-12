@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+interface bgLinearProps {
+    bgLinear: boolean
+}
+
+export const Container = styled.div<bgLinearProps>`
     max-width: 1366px;
     width: 100%;
     height: 7rem;
@@ -12,6 +16,8 @@ export const Container = styled.div`
     position: fixed;
     top: 0;
     z-index: 5;
+
+    background: ${({ bgLinear }) => bgLinear ? 'linear-gradient(180deg, rgba(52,58,64,1) 0%, rgba(70,70,68,0) 100%)' : ''};
 `
 
 export const LogoName = styled.div`
@@ -39,13 +45,13 @@ export const LogoName = styled.div`
 
 `
 
-export const Menu = styled.nav`
+export const Menu = styled.nav<bgLinearProps>`
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
     div {
         max-width: 450px;
@@ -54,9 +60,11 @@ export const Menu = styled.nav`
         display: flex;
         justify-content: space-around;
 
+
         a {
             text-decoration: none;
             color: #2b2b2b;
+            color: ${({ bgLinear }) => bgLinear ? 'white' : ''};
 
             line-height: 1rem;
             padding:1rem;

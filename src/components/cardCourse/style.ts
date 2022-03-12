@@ -165,6 +165,7 @@ export const ContentSection = styled.div`
 export const OtherInfo = styled.div`
     width: 100%;
     height: auto;
+    position: relative;
 
     span {
         font-size: .9rem;
@@ -174,5 +175,16 @@ export const OtherInfo = styled.div`
         padding: 1rem 2rem;
         font-size: .9rem;
         font-weight: bold;
+    }
+
+    > div {
+        position: absolute;
+        right: 0;
+        bottom: .5rem;
+        padding: .5rem;
+
+        color: white;
+        background-color: #c71f37;
+        border-radius: 15px;
     }
 `
