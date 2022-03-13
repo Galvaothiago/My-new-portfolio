@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
+import { HoverContext } from "../context/HandleHoverContext"
 
 
-export const useScrollPosition = (HTMLElement: React.RefObject<HTMLDivElement>) => {
+export const useScrollPosition = (HTMLElement: React.RefObject<HTMLDivElement>, ScrollLimit: number) => {
     const [valueScroll, setValueScroll] = useState<number>(0)
+    const { handleBackground } = useContext(HoverContext)
+    const SCROLL_LIMIT = ScrollLimit | 6  /*default value*/
 
     useEffect(() => {
         if(HTMLElement.current) {
@@ -16,6 +19,12 @@ export const useScrollPosition = (HTMLElement: React.RefObject<HTMLDivElement>) 
     
         HTMLElement.current.addEventListener('scroll', updateSCrollValue)
   
+
+        if(valueScroll > SCROLL_LIMIT) {
+            handleBackground(true)
+          } else {
+            handleBackground(false)
+          }
         return () => HTMLElement.current?.removeEventListener('scroll', updateSCrollValue) 
         
         }

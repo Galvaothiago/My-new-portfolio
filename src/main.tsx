@@ -6,12 +6,12 @@ import { HandleHoverProvide } from './context/HandleHoverContext';
 
 ReactDOM.render(
   <>
-    <BrowserRouter>
       <HandleHoverProvide>
+    <BrowserRouter>
         <App />
         <GlobalStyle />
-      </HandleHoverProvide>
     </BrowserRouter>
+      </HandleHoverProvide>
   </>,
   document.getElementById('root')
 )
