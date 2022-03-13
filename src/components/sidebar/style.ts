@@ -18,7 +18,6 @@ export const Container = styled.aside`
     align-items: center;
     justify-content: center;
 
-    background-color: #c71f37;
     border-radius: 0 10rem 10rem 0;
     position: relative;
 

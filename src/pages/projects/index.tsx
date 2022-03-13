@@ -2,38 +2,21 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { Card } from "../../components/cardProject";
 import { Sidebar } from "../../components/sidebar";
 import { HoverContext } from "../../context/HandleHoverContext";
+import { useScrollPosition } from "../../hooks/useScrollPosition";
 import { Container, Content } from "./style";
 
 export function Projects() {
-    const [ value, setValue ] = useState(0)
-    const SCROLL_LIMIT = 6
-
-    const container = useRef<HTMLDivElement>(null)
-
-    const { handleBackground } = useContext(HoverContext)
-    
-    useEffect(() => {
-      if(container.current) {
-        const updateSCrollValue = () => {
-          const element = container.current
-          const { scrollTop, scrollHeight, offsetHeight }: any = element
+  const container = useRef<HTMLDivElement>(null)
+  const { handleBackground } = useContext(HoverContext)
+  const valueScroll = useScrollPosition(container)
   
-          const progressScroll = Number((scrollTop / (scrollHeight - offsetHeight) * 100).toFixed(2))
-          setValue(progressScroll)
-        }
-  
-      container.current.addEventListener('scroll', updateSCrollValue)
-  
+  const SCROLL_LIMIT = 6
 
-      if(value > SCROLL_LIMIT) {
-        handleBackground(true)
-      } else {
-        handleBackground(false)
-      }
-      return () => container.current?.removeEventListener('scroll', updateSCrollValue) 
-      
-      }
-    }, [value, container])
+  if(valueScroll > SCROLL_LIMIT) {
+    handleBackground(true)
+  } else {
+    handleBackground(false)
+  }
 
     return (
         <Container>
