@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    max-width: 55rem;
+    max-width: 50rem;
     width: 100%;
     height: auto;
 
@@ -12,9 +12,9 @@ export const Container = styled.div`
 
 export const Main = styled.div`
     width: 100%;
-    height: 15rem;
+    height: 12rem;
 
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     position: relative;
 
@@ -34,8 +34,16 @@ export const Main = styled.div`
     }
 
     img { 
-        width: 15rem;
+        width: 10rem;
+        height: 100%;
         border-radius: 35px;
+        filter: brightness(.5);
+
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            filter: brightness(1);
+        }
     }
 
     div {
