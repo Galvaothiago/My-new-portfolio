@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 import { appearEffect } from '../../global'
 
-export const Container = styled.main`
+interface EventProps { 
+    allowEvent: boolean
+}
+
+export const Container = styled.main<EventProps>`
     width: 100%;
     height: 100vh;
     display: flex;
-    /* justify-content: center; */
-
-    /* overflow-y: auto; */
-    /* padding: 6rem 8rem 2rem 8rem; */
+    /* pointer-events: ${({ allowEvent }) => allowEvent ? '' : 'none'}; */
 `
 
 export const Content = styled.div`
@@ -19,8 +20,6 @@ export const Content = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-
-    /* background-color: red; */
 
     padding: 8rem 8rem;
     animation: ${appearEffect} 2s ease-in-out;

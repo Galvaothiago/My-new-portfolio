@@ -1,9 +1,12 @@
 import { Container } from "./style";
 import { HiCode } from 'react-icons/hi'
+import { ModalContext } from "../../context/ModalContext";
+import { useContext } from "react";
 
 export function Card() {
+    const { openModal } = useContext(ModalContext)
     return (
-        <Container>
+        <Container onClick={() => openModal()} >
             <header>
                 <h4>API Gas Station</h4>
                 <div>
