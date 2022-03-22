@@ -21,15 +21,12 @@ export const ModalContent = styled.div`
     
     background-color: rgba(255, 255, 255, 0.4);
 
-
     backdrop-filter: blur(20px);
     position: relative;
 
     @media(max-height: 768px) {
         transform: translateY(50px);
     }
-    
-   
 `
 
 export const CloseButton = styled.div`
