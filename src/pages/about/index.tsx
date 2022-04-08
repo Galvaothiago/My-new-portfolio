@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { ContainerAbout, Content } from "./style";
+import { ContainerAbout, Content, SocialMedia } from "./style";
 import { Container } from "./style";
-import { AiFillHome } from 'react-icons/ai'
-import { Link } from "react-router-dom";
 import { Sidebar } from "../../components/sidebar";
+
+import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+import { MdEmail } from 'react-icons/md'
 
 export function About() {
     const about_me = `Meu nome é Thiago Silva Galvão, atualmente moro em Vinhedo - SP. 
@@ -25,6 +26,10 @@ export function About() {
 
     const [ showAllText, setShowAllText] = useState<Boolean>(false)
 
+    const EMAIL = 'thiagogalvaodev@outlook.com'
+    const GITHUB = 'https://github.com/Galvaothiago'
+    const LINKEDIN = 'https://www.linkedin.com/in/thiago-galvao-155062208/'
+
     const trucate = (text: string, numbersCharacter: number = 800) => {
         if(showAllText) {
             return text
@@ -35,7 +40,17 @@ export function About() {
 
     const handleShowAllText = () => {
         setShowAllText(oldState => !oldState)
-    } 
+    }
+
+    const copyCodeToClipboard = () => {
+        if(!navigator.clipboard) {
+            alert("navegador não suporta a função de copiar texto para o 'clipboard'")
+            return
+        }
+
+        navigator.clipboard.writeText(EMAIL)
+        alert("email copiado para área de transferência")
+    }
 
 
 
@@ -44,8 +59,19 @@ export function About() {
             <Sidebar />
             <Content>
                 <ContainerAbout>
-                    <p>{ trucate(about_me)}</p>
-                    <a href="#" onClick={handleShowAllText}>{ showAllText ? 'reduzir' : 'Ler mais'}</a>
+                    <div>
+                        <p>{ trucate(about_me)}</p>
+                        <span onClick={handleShowAllText}>{ showAllText ? 'reduzir' : 'Ler mais'}</span>
+                    </div>
+                    <SocialMedia>
+                        <a href={GITHUB} target="_blank">
+                            <AiFillGithub />
+                        </a>
+                        <a href={LINKEDIN} target="_blank">
+                            <AiFillLinkedin />
+                        </a>
+                        <MdEmail  onClick={copyCodeToClipboard}/>
+                    </SocialMedia>
                 </ContainerAbout>
             </Content>
         </Container>

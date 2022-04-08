@@ -64,7 +64,6 @@ export const Menu = styled.nav<bgLinearProps>`
         a {
             text-decoration: none;
             color: #2b2b2b;
-            color: ${({ bgLinear }) => bgLinear ? 'white' : ''};
 
             line-height: 1rem;
             padding:1rem;
